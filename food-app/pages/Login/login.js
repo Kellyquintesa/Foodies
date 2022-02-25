@@ -5,13 +5,11 @@ import {
   Text,
   Input,
   Button,
-  Link,
   ButtonGroup,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import NextLink from "next/link";
 
-const create = () => {
+const login = () => {
   const Logo = () => (
     <Box>
       <Flex textAlign="center" padding={8}>
@@ -29,23 +27,7 @@ const create = () => {
   );
 
   const button = () => (
-    <Box padding={5}>
-      <Button
-        borderRadius={20}
-        width="70%"
-        marginBottom={5}
-        color="black"
-        backgroundColor="white"
-        boxShadow="base"
-        p="6"
-        fontSize="sm"
-        marginLeft={14}
-
-        
-      >
-        <Image src="/images/google.png" width={30} height={30} />
-        Sign-in with Google
-      </Button>{" "}
+    <Box padding={5} marginTop={40}>
       <Button
         borderRadius={20}
         width="full"
@@ -57,25 +39,23 @@ const create = () => {
         Create an account
       </Button>{" "}
       <br />
-      <NextLink href="/Login/login" passHref>
-        <Button
-          borderRadius={20}
-          width="full"
-          color="foodiez.orange"
-          fontSize="sm"
-        >
-          Login to my account
-        </Button>
-      </NextLink>
+      <Button
+        borderRadius={20}
+        width="full"
+        color="foodiez.orange"
+        fontSize="sm"
+      >
+        Login to my account
+      </Button>
     </Box>
   );
 
   return (
-    <Box>
+    <Box height="100vh" > 
       {Logo()}
       <Spacer />
 
-      <Box padding={6}>
+      <Box  padding={6}>
         <Box>
           <Text
             fontSize="2xl"
@@ -83,19 +63,17 @@ const create = () => {
             marginBottom={3}
             paddingLeft={7}
           >
-            Create an account
+           Login to your account
           </Text>
           <Spacer />
           <Text fontSize="md" marginBottom={10} paddingLeft={7}>
-            Welcome friend, enter your details so lets get started in ordering
-            food.
+          Good to see you again, enter your details below to continue ordering.
           </Text>
         </Box>
-
-        <Spacer />
+        <Spacer/>
 
         <Box>
-          <Box marginBottom={5}>
+        <Box marginBottom={5}>
             <Text fontSize="xs" paddingBottom={2} paddingLeft={7}>
               Email Address
             </Text>
@@ -117,23 +95,20 @@ const create = () => {
               borderRadius={12}
             />
           </Box>
-          <Box marginBottom={5}>
-            <Text fontSize="xs" paddingBottom={2} paddingLeft={7}>
-              Confirm Password
-            </Text>
-            <Input
-              placeholder="Confirm Password"
-              size="sm"
-              padding={5}
-              borderRadius={12}
-            />
-          </Box>
         </Box>
+        <Spacer/>
 
-        <Box marginTop={20}>{button()}</Box>
+        {button()}
+        
+
+
+
+
       </Box>
+
+
     </Box>
   );
 };
 
-export default create;
+export default login;

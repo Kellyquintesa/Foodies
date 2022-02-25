@@ -3,6 +3,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { Box, Flex, Spacer, Text, Button, ButtonGroup } from "@chakra-ui/react";
 import Image from "next/image";
 
+
 const Home = () => {
   const images = [
     <div className="1">
@@ -27,26 +28,29 @@ const Home = () => {
       infinite
       mouseTracking
     />
-  )
+  );
 
   const button = () => (
-<Box padding={5}>
-        <Button
-          borderRadius={20}
-          width="full"
-          marginBottom={5}
-          color="white"
-          backgroundColor="foodiez.orange"
-        >
-          Create an account
-        </Button>{" "}
-        <br />
-        <Button borderRadius={20} width="full" color="foodiez.orange">
-          Login
-        </Button>
-      </Box>
-
-  )
+    <Box padding={5}>
+      
+      <Button
+        borderRadius={20}
+        width="full"
+        marginBottom={5}
+        color="white"
+        backgroundColor="foodiez.orange"
+      >
+        Create an account
+      </Button>{" "}
+   
+      <br />
+     
+      <Button borderRadius={20} width="full" color="foodiez.orange">
+        Login
+      </Button>
+      
+    </Box>
+  );
 
   return (
     <Box>
@@ -63,7 +67,6 @@ const Home = () => {
       </Flex>
       {renderCarousel()}
       {button()}
-      
     </Box>
   );
 };

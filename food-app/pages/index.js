@@ -16,7 +16,7 @@ const Home = () => {
     </div>,
   ];
 
-  const renderCarousel = () => {
+  const renderCarousel = () => (
     <AliceCarousel
       autoPlay
       autoPlayInterval="3000"
@@ -26,24 +26,11 @@ const Home = () => {
       disableButtonsControls
       infinite
       mouseTracking
-    />;
-  };
+    />
+  )
 
-  return (
-    <Box>
-      <Flex textAlign="center" padding={10}>
-        <Box w="70px" h="10" />
-        <Spacer />
-        <Box w="170px" h="10">
-          <Image src="/images/icon.png" width={35} height={24} />
-        </Box>
-        <Spacer />
-        <Box w="70px" h="10" fontWeight={700} color="foodiez.orange">
-          Skip
-        </Box>
-      </Flex>
-      {renderCarousel()}
-      <Box padding={5}>
+  const button = () => (
+<Box padding={5}>
         <Button
           borderRadius={20}
           width="full"
@@ -58,6 +45,25 @@ const Home = () => {
           Login
         </Button>
       </Box>
+
+  )
+
+  return (
+    <Box>
+      <Flex textAlign="center" padding={8}>
+        <Box w="70px" h="10" />
+        <Spacer />
+        <Box w="170px" h="10">
+          <Image src="/images/icon.png" width={35} height={24} />
+        </Box>
+        <Spacer />
+        <Box w="70px" h="10" fontWeight={700} color="foodiez.orange">
+          Skip
+        </Box>
+      </Flex>
+      {renderCarousel()}
+      {button()}
+      
     </Box>
   );
 };

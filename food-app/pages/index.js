@@ -32,7 +32,7 @@ const Home = () => {
 
   const button = () => (
     <Box padding={5}>
-      
+     
       <Button
         borderRadius={20}
         width="full"

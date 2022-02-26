@@ -28,6 +28,7 @@ const create = () => {
     </Box>
   );
 
+
   const button = () => (
     <Box padding={5}>
       <Button
@@ -86,7 +87,7 @@ const create = () => {
             Create an account
           </Text>
           <Spacer />
-          <Text fontSize="md" marginBottom={10} paddingLeft={7}>
+          <Text fontSize="md" marginBottom={10} paddingLeft={7} color="#3D3D3D">
             Welcome friend, enter your details so lets get started in ordering
             food.
           </Text>

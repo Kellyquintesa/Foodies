@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-const login = () => {
+const forgot = () => {
   const Logo = () => (
     <Box>
       <Flex textAlign="center" padding={8}>
@@ -26,8 +26,19 @@ const login = () => {
     </Box>
   );
 
+  const content = () => (
+    <Box textAlign="center" p={10}>
+      <Text fontSize="2xl" fontWeight={600} marginBottom={5}>
+        Forgot Password
+      </Text>
+      <Text fontSize="md" color="#3D3D3D">
+        Enter your email address to request a password reset.{" "}
+      </Text>
+    </Box>
+  );
+
   const button = () => (
-    <Box padding={5} marginTop={40}>
+    <Box padding={5} marginTop={30}>
       <Button
         borderRadius={20}
         width="70%"
@@ -65,30 +76,10 @@ const login = () => {
   );
 
   return (
-    <Box height="100vh">
+    <Box>
       {Logo()}
-      <Spacer />
-
-      <Box padding={6}>
-        <Box>
-          <Text
-            fontSize="2xl"
-            fontWeight={600}
-            marginBottom={3}
-            paddingLeft={7}
-          >
-            Login to your account
-          </Text>
-          <Spacer />
-          <Text fontSize="md" marginBottom={10} paddingLeft={7}>
-            Good to see you again, enter your details below to continue
-            ordering.
-          </Text>
-        </Box>
-        <Spacer />
-
-        <Box>
-          <Box marginBottom={5}>
+      {content()}
+      <Box marginBottom={5} padding={8}>
             <Text fontSize="xs" paddingBottom={2} paddingLeft={7}>
               Email Address
             </Text>
@@ -99,24 +90,9 @@ const login = () => {
               borderRadius={12}
             />
           </Box>
-          <Box marginBottom={5}>
-            <Text fontSize="xs" paddingBottom={2} paddingLeft={7}>
-              Password
-            </Text>
-            <Input
-              placeholder="Enter password"
-              size="sm"
-              padding={5}
-              borderRadius={12}
-            />
-          </Box>
-        </Box>
-        <Spacer />
-
-        {button()}
-      </Box>
+      {button()}
     </Box>
   );
 };
 
-export default login;
+export default forgot;

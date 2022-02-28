@@ -12,9 +12,9 @@ import {
   ExternalLinkIcon
 } from "@chakra-ui/react";
 
-const delivery = () => {
+const Delivery = () => {
     
-  const header = () => (
+  const Header = () => (
     <Box>
       <Flex padding={10}>
         <Box w="70px" h="10" >
@@ -54,8 +54,8 @@ const delivery = () => {
   
   <Box>
       
-      {header()}</Box>
+      {Header()}</Box>
   );
 };
 
-export default delivery;
+export default Delivery;

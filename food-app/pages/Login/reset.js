@@ -8,7 +8,7 @@ import {
   ButtonGroup,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
 const reset = () => {
   const Logo = () => (
@@ -38,12 +38,12 @@ const reset = () => {
     </Box>
   );
 
-  const ReactCodeInput = dynamic(import('react-code-input'));
+  const ReactCodeInput = dynamic(import("react-code-input"));
 
   const enterCode = () => (
     <Box padding="5px 10px" width="100%" margin="auto">
       <Box padding={5} width={300} margin="auto">
-      <ReactCodeInput type='number' fields={6} />
+        <ReactCodeInput type="number" fields={6} />
       </Box>
     </Box>
   );
@@ -68,7 +68,14 @@ const reset = () => {
       {Logo()}
       {content()}
       {/* {enterCode()} */}
-      <ReactCodeInput type='number' fields={6} {...props}/>
+      <Box width="100%" padding={5} >
+      <Box p={5}  width="fit-content" margin="auto">
+        <Text fontSize="xs" color="#3D3D3D" textAlign="center" p={3}>
+          Enter code{" "}
+        </Text>
+        <ReactCodeInput type="number" fields={4} />
+      </Box>
+      </Box>
       {button()}
     </Box>
   );

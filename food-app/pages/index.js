@@ -1,18 +1,18 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { Box, Flex, Spacer, Text, Button, ButtonGroup, Center } from "@chakra-ui/react";
+import { Box, Flex, Spacer, Button, Center } from "@chakra-ui/react";
 import Image from "next/image";
-
+import Link from "next/link";
 
 const Home = () => {
   const images = [
-    <div className="1" style={{ display: 'flex', justifyContent: 'center' }}>
+    <div className="1" style={{ display: "flex", justifyContent: "center" }}>
       <img src="/images/login-1.png" />
     </div>,
-    <div className="2" style={{ display: 'flex', justifyContent: 'center' }}>
+    <div className="2" style={{ display: "flex", justifyContent: "center" }}>
       <img src="/images/login-2.png" />
     </div>,
-    <div className="3" style={{ display: 'flex', justifyContent: 'center' }}>
+    <div className="3" style={{ display: "flex", justifyContent: "center" }}>
       <img src="/images/login-3.png" />
     </div>,
   ];
@@ -32,23 +32,23 @@ const Home = () => {
 
   const button = () => (
     <Box padding={5}>
-     
-      <Button
-        borderRadius={20}
-        width="full"
-        marginBottom={5}
-        color="white"
-        backgroundColor="foodiez.orange"
-      >
-        Create an account
-      </Button>{" "}
-   
+      <Link href="/login/create">
+        <Button
+          borderRadius={20}
+          width="full"
+          marginBottom={5}
+          color="white"
+          backgroundColor="foodiez.orange"
+        >
+          Create an account
+        </Button>
+      </Link>
       <br />
-     
-      <Button borderRadius={20} width="full" color="foodiez.orange">
-        Login
-      </Button>
-      
+      <Link href="/login">
+        <Button borderRadius={20} width="full" color="foodiez.orange">
+          Login
+        </Button>
+      </Link>
     </Box>
   );
 

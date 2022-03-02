@@ -1,43 +1,38 @@
-import { Box, Flex, Spacer } from "@chakra-ui/react";
 import {
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  RepeatIcon,
-  EditIcon,
-  IconButton,
-  HamburgerIcon,
-  AddIcon,
-  ExternalLinkIcon
+  Box,
+  Flex,
+  Spacer,
+  useDisclosure,
+  Button
 } from "@chakra-ui/react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Delivery = () => {
-    
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const Header = () => (
     <Box>
       <Flex padding={10}>
-        <Box w="70px" h="10" >
-          <Menu>
+        <Box w="70px" h="10">
+          <Menu isOpen={isOpen} onClose={onClose}>
             <MenuButton
-              as={IconButton}
-              aria-label="Options"
-              icon={<HamburgerIcon />}
-              variant="outline"
-            />
+              as={Button}
+              variant="solid"
+              colorScheme="teal"
+              onClick={onOpen}
+            >
+              <GiHamburgerMenu />
+            </MenuButton>
             <MenuList>
-              <MenuItem icon={<AddIcon />} command="⌘T">
-                New Tab
-              </MenuItem>
-              <MenuItem icon={<ExternalLinkIcon />} command="⌘N">
-                New Window
-              </MenuItem>
-              <MenuItem icon={<RepeatIcon />} command="⌘⇧N">
-                Open Closed Tab
-              </MenuItem>
-              <MenuItem icon={<EditIcon />} command="⌘O">
-                Open File...
-              </MenuItem>
+              <MenuItem>Download</MenuItem>
+              <MenuItem>Create a Copy</MenuItem>
+              <MenuItem>Mark as Draft</MenuItem>
+              <MenuItem>Delete</MenuItem>
+              <MenuItem>Attend a Workshop</MenuItem>
             </MenuList>
           </Menu>
         </Box>
@@ -50,12 +45,7 @@ const Delivery = () => {
     </Box>
   );
 
-  return (
-  
-  <Box>
-      
-      {Header()}</Box>
-  );
+  return <Box>{Header()}</Box>;
 };
 
 export default Delivery;

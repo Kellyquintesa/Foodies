@@ -1,33 +1,33 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { Box, Flex, Spacer, Text, Button, ButtonGroup } from "@chakra-ui/react";
+import { Box, Flex, Spacer, Text, Button, ButtonGroup, Center } from "@chakra-ui/react";
 import Image from "next/image";
 
 
 const Home = () => {
   const images = [
-    <div className="1">
+    <div className="1" style={{ display: 'flex', justifyContent: 'center' }}>
       <img src="/images/login-1.png" />
     </div>,
-    <div className="2">
+    <div className="2" style={{ display: 'flex', justifyContent: 'center' }}>
       <img src="/images/login-2.png" />
     </div>,
-    <div className="3">
+    <div className="3" style={{ display: 'flex', justifyContent: 'center' }}>
       <img src="/images/login-3.png" />
     </div>,
   ];
 
   const renderCarousel = () => (
-    <AliceCarousel
-      autoPlay
-      autoPlayInterval="3000"
-      items={images}
-      animationType="fadeout"
-      animationDuration={800}
-      disableButtonsControls
-      infinite
-      mouseTracking
-    />
+    <Center>
+      <AliceCarousel
+        items={images}
+        animationType="fadeout"
+        animationDuration={800}
+        disableButtonsControls
+        infinite
+        mouseTracking
+      />
+    </Center>
   );
 
   const button = () => (

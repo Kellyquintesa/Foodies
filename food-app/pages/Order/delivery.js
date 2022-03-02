@@ -7,22 +7,25 @@ import {
   Flex,
   Spacer,
   useDisclosure,
-  Button
+  Image,
+  Button,
+  Text,
+  Center,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineDown } from "react-icons/ai";
 
 const Delivery = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const Header = () => (
-    <Box>
-      <Flex padding={10}>
-        <Box w="70px" h="10">
+    <Box >
+      <Flex padding={10} >
+        <Box w="70px" h="50" >
           <Menu isOpen={isOpen} onClose={onClose}>
             <MenuButton
               as={Button}
               variant="solid"
-              colorScheme="teal"
               onClick={onOpen}
             >
               <GiHamburgerMenu />
@@ -38,14 +41,33 @@ const Delivery = () => {
         </Box>
 
         <Spacer />
-        <Box w="170px" h="10" bg="red.500" />
+        <Box w="200px" h="50">
+          <Center>
+            <Box width="fit-content">
+              <Text
+                fontSize="xs"
+                alignItems={"center"}
+                display={"flex"}
+                paddingLeft={5}
+              >
+                Delivery to <AiOutlineDown />
+              </Text>
+
+              <Text fontSize="xs" textAlign={"center"} color={"foodiez.orange"}>
+                lekki phase 1, Estate
+              </Text>
+            </Box>
+          </Center>
+        </Box>
         <Spacer />
-        <Box w="180px" h="10" bg="red.500" />
+        <Box w="50px" h="50">
+          <img src="/images/person.jpg" />
+        </Box>
       </Flex>
     </Box>
   );
 
-  return <Box>{Header()}</Box>;
+  return <Box backgroundColor={"#F7F7FB"}>{Header()}</Box>;
 };
 
 export default Delivery;

@@ -6,6 +6,7 @@ import {
   Input,
   Button,
   ButtonGroup,
+  Link,
 } from "@chakra-ui/react";
 import Image from "next/image";
 
@@ -39,6 +40,7 @@ const forgot = () => {
 
   const button = () => (
     <Box padding={5} marginTop={30}>
+      <Link href="/login/reset">
       <Button
         borderRadius={20}
         width="70%"
@@ -51,8 +53,9 @@ const forgot = () => {
         marginLeft={14}
       >
         <Image src="/images/google.png" width={30} height={30} />
-        Sign-in with Google
+        Recieve code from Gmail
       </Button>{" "}
+      </Link>
       <Button
         borderRadius={20}
         width="full"
@@ -76,7 +79,7 @@ const forgot = () => {
   );
 
   return (
-    <Box>
+    <Box backgroundColor={"#F7F7FB"} height="100vh">
       {Logo()}
       {content()}
       <Box marginBottom={5} padding={8}>

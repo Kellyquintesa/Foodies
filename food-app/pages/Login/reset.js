@@ -57,7 +57,7 @@ const reset = () => {
   );
 
   return (
-    <Box>
+    <Box backgroundColor={"#F7F7FB"} height="100vh" >
       {Logo()}
       {content()}
       

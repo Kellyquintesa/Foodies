@@ -53,7 +53,7 @@ const Home = () => {
   );
 
   return (
-    <Box>
+    <Box backgroundColor={"#F7F7FB"} height="100vh" >
       <Flex textAlign="center" padding={8}>
         <Box w="70px" h="10" />
         <Spacer />

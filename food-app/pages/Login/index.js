@@ -6,8 +6,10 @@ import {
   Input,
   Button,
   ButtonGroup,
+
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const login = () => {
   const Logo = () => (
@@ -19,9 +21,11 @@ const login = () => {
           <Image src="/images/icon.png" width={35} height={24} />
         </Box>
         <Spacer />
+        <Link href="/order/delivery">
         <Box w="70px" h="10" fontWeight={700} color="foodiez.orange">
           Skip
         </Box>
+        </Link>
       </Flex>
     </Box>
   );
@@ -65,7 +69,7 @@ const login = () => {
   );
 
   return (
-    <Box height="100vh">
+    <Box height="100vh" backgroundColor={"#F7F7FB"}>
       {Logo()}
       <Spacer />
 
@@ -112,6 +116,21 @@ const login = () => {
           </Box>
         </Box>
         <Spacer />
+
+        <Link href="/login/forgot">
+          <Box>
+            <Text
+              fontSize="xs"
+              paddingBottom={2}
+              paddingLeft={7}
+              textAlign="center"
+              color={"orange"}
+              
+            >
+              Forgot your password?
+            </Text>
+          </Box>
+        </Link>
 
         {button()}
       </Box>

@@ -6,7 +6,7 @@ import {
   Input,
   Button,
   Link,
-  ButtonGroup,
+
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -58,7 +58,7 @@ const create = () => {
         Create an account
       </Button>{" "}
       <br />
-      <NextLink href="/Login/login" passHref>
+      <Link href="/login">
         <Button
           borderRadius={20}
           width="full"
@@ -67,12 +67,12 @@ const create = () => {
         >
           Login to my account
         </Button>
-      </NextLink>
+        </Link>
     </Box>
   );
 
   return (
-    <Box>
+    <Box backgroundColor={"#F7F7FB"} height="100vh">
       {Logo()}
       <Spacer />
 

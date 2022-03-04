@@ -14,7 +14,7 @@ import {
   border,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaPizzaSlice} from "react-icons/fa";
+import { FaPizzaSlice } from "react-icons/fa";
 import { AiOutlineDown } from "react-icons/ai";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -24,36 +24,51 @@ const Delivery = () => {
 
   const responsive = {
     0: { items: 1 },
-    320: { items: 2 },
+    420: { items: 2 },
     1024: { items: 3 },
   };
 
   const items = [
     <Box width={100} height={120} borderRadius={50} border="1px solid orange">
-      <Box textAlign={"center"} padding={3} fontSize="12px">
-      <img src="/images/pizza.png" />
-       Pizza</Box>
+      <Box textAlign={"center"} padding={3} fontSize="12px" marginTop={1}>
+        <Center>
+          <img src="/images/pizza.png" />
+        </Center>
+        Pizza
+      </Box>
     </Box>,
     <Box width={100} height={120} borderRadius={50} border="1px solid orange">
-    <Box textAlign={"center"} padding={3} fontSize="12px">
-    <img src="/images/burger.png" />
-     Burger</Box>
-  </Box>,
+      <Box textAlign={"center"} padding={3} fontSize="12px" marginTop={3}>
+        <Center>
+          <img src="/images/burger.png" width={40} />
+        </Center>
+        Burger
+      </Box>
+    </Box>,
     <Box width={100} height={120} borderRadius={50} border="1px solid orange">
-    <Box textAlign={"center"} padding={3} fontSize="12px">
-    <img src="/images/sausage.png" />
-     Sausage</Box>
-  </Box>,
+      <Box textAlign={"center"} padding={3} fontSize="12px" marginTop={3}>
+        <Center>
+          <img src="/images/sausage.png" width={40} />
+        </Center>
+        Sausage
+      </Box>
+    </Box>,
     <Box width={100} height={120} borderRadius={50} border="1px solid orange">
-    <Box textAlign={"center"} padding={3} fontSize="12px">
-    <img src="/images/beverages.png" />
-     Beverages</Box>
-  </Box>,
-   <Box width={100} height={120} borderRadius={50} border="1px solid orange">
-   <Box textAlign={"center"} padding={3} fontSize="12px">
-   <img src="/images/noodle.png" />
-    Noodles</Box>
- </Box>,
+      <Box textAlign={"center"} padding={3} fontSize="12px" marginTop={3}>
+        <Center>
+          <img src="/images/beverages.png" width={40} />
+        </Center>
+        Beverages
+      </Box>
+    </Box>,
+    <Box width={100} height={120} borderRadius={50} border="1px solid orange">
+      <Box textAlign={"center"} padding={3} fontSize="12px" marginTop={3}>
+        <Center>
+          <img src="/images/noodle.png" width={40} />
+        </Center>
+        Noodles
+      </Box>
+    </Box>,
   ];
 
   const Header = () => (
@@ -123,11 +138,100 @@ const Delivery = () => {
     </Box>
   );
 
+  const menu = [
+    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+      <Center paddingTop={30}>
+        <img src="/images/burger-menu.png" width={200} />
+      </Center>
+      <Box padding={3}>
+        <Text fontSize="lg" marginBottom={2} fontWeight={500}>
+          Big cheese burger
+        </Text>
+        <Text fontSize="sm">
+          No 10 opp lekki phase 1 bridge in sangotedo estate
+        </Text>
+      </Box>
+    </Box>,
+    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+      <Center paddingTop={30}>
+        <img src="/images/burger-menu.png" width={200} />
+      </Center>
+      <Box padding={3}>
+        <Text fontSize="lg" marginBottom={2} fontWeight={500}>
+          Big cheese burger
+        </Text>
+        <Text fontSize="sm">
+          No 10 opp lekki phase 1 bridge in sangotedo estate
+        </Text>
+      </Box>
+    </Box>,
+    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+      <Center paddingTop={30}>
+        <img src="/images/burger-menu.png" width={200} />
+      </Center>
+      <Box padding={3}>
+        <Text fontSize="lg" marginBottom={2} fontWeight={500}>
+          Big cheese burger
+        </Text>
+        <Text fontSize="sm">
+          No 10 opp lekki phase 1 bridge in sangotedo estate
+        </Text>
+      </Box>
+    </Box>,
+    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+      <Center paddingTop={30}>
+        <img src="/images/burger-menu.png" width={200} />
+      </Center>
+      <Box padding={3}>
+        <Text fontSize="lg" marginBottom={2} fontWeight={500}>
+          Big cheese burger
+        </Text>
+        <Text fontSize="sm">
+          No 10 opp lekki phase 1 bridge in sangotedo estate
+        </Text>
+      </Box>
+    </Box>,
+    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+      <Center paddingTop={30}>
+        <img src="/images/burger-menu.png" width={200} />
+      </Center>
+      <Box padding={3}>
+        <Text fontSize="lg" marginBottom={2} fontWeight={500}>
+          Big cheese burger
+        </Text>
+        <Text fontSize="sm">
+          No 10 opp lekki phase 1 bridge in sangotedo estate
+        </Text>
+      </Box>
+    </Box>,
+  ];
+
+  const menuCarousel = () => (
+    <AliceCarousel
+      mouseTracking
+      keyboardNavigation
+      items={menu}
+      responsive={responsive}
+      disableDotsControls
+      disableButtonsControls
+    />
+  );
+
   return (
-    <Box backgroundColor={"#F7F7FB"} height="100vh" padding={10} >
+    <Box backgroundColor={"#F7F7FB"} height="100vh" padding={10}>
       {Header()}
       {foodList()}
       {listCarousel()}
+
+      <Flex marginTop={5} marginBottom={5} alignItems={"center"}>
+        <Box fontWeight={700} fontSize="xl">
+          Popular restaurants
+        </Box>
+        <Spacer />
+        <Box color={"#FE554A"}>View all(29)</Box>
+      </Flex>
+
+      {menuCarousel()}
     </Box>
   );
 };

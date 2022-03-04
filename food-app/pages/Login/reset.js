@@ -3,7 +3,7 @@ import {
   Flex,
   Spacer,
   Text,
-  Input,
+  Link,
   Button,
   ButtonGroup,
 } from "@chakra-ui/react";
@@ -20,9 +20,11 @@ const reset = () => {
           <Image src="/images/icon.png" width={35} height={24} />
         </Box>
         <Spacer />
+        <Link href="/order/delivery">
         <Box w="70px" h="10" fontWeight={700} color="foodiez.orange">
           Skip
         </Box>
+        </Link>
       </Flex>
     </Box>
   );

@@ -5,7 +5,7 @@ import {
   Text,
   Input,
   Button,
-  ButtonGroup,
+  Center,
   Link,
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -20,9 +20,11 @@ const forgot = () => {
           <Image src="/images/icon.png" width={35} height={24} />
         </Box>
         <Spacer />
+        <Link href="/order/delivery">
         <Box w="70px" h="10" fontWeight={700} color="foodiez.orange">
           Skip
         </Box>
+        </Link>
       </Flex>
     </Box>
   );
@@ -41,20 +43,21 @@ const forgot = () => {
   const button = () => (
     <Box padding={5} marginTop={30}>
       <Link href="/login/reset">
+      <Center width={"full"} marginBottom={5}>
       <Button
         borderRadius={20}
         width="70%"
-        marginBottom={5}
         color="black"
         backgroundColor="white"
         boxShadow="base"
         p="6"
         fontSize="sm"
-        marginLeft={14}
+     
       >
         <Image src="/images/google.png" width={30} height={30} />
         Recieve code from Gmail
       </Button>{" "}
+      </Center>
       </Link>
       <Button
         borderRadius={20}

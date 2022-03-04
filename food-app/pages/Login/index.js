@@ -41,7 +41,7 @@ const login = () => {
           boxShadow="base"
           p="6"
           fontSize="sm"
-          marginLeft={14}
+       
         >
           <Image src="/images/google.png" width={30} height={30} />
           Sign-in with Google

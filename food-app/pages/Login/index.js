@@ -6,7 +6,7 @@ import {
   Input,
   Button,
   ButtonGroup,
-
+  Center,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,9 +22,9 @@ const login = () => {
         </Box>
         <Spacer />
         <Link href="/order/delivery">
-        <Box w="70px" h="10" fontWeight={700} color="foodiez.orange">
-          Skip
-        </Box>
+          <Box w="70px" h="10" fontWeight={700} color="foodiez.orange">
+            Skip
+          </Box>
         </Link>
       </Flex>
     </Box>
@@ -32,20 +32,21 @@ const login = () => {
 
   const button = () => (
     <Box padding={5} marginTop={40}>
-      <Button
-        borderRadius={20}
-        width="70%"
-        marginBottom={5}
-        color="black"
-        backgroundColor="white"
-        boxShadow="base"
-        p="6"
-        fontSize="sm"
-        marginLeft={14}
-      >
-        <Image src="/images/google.png" width={30} height={30} />
-        Sign-in with Google
-      </Button>{" "}
+      <Center width={"full"}  marginBottom={5}>
+        <Button
+          borderRadius={20}
+          width="70%"
+          color="black"
+          backgroundColor="white"
+          boxShadow="base"
+          p="6"
+          fontSize="sm"
+          marginLeft={14}
+        >
+          <Image src="/images/google.png" width={30} height={30} />
+          Sign-in with Google
+        </Button>{" "}
+      </Center>
       <Button
         borderRadius={20}
         width="full"
@@ -57,14 +58,16 @@ const login = () => {
         Create an account
       </Button>{" "}
       <br />
-      <Button
-        borderRadius={20}
-        width="full"
-        color="foodiez.orange"
-        fontSize="sm"
-      >
-        Login to my account
-      </Button>
+      <Link href={"/order/delivery"}>
+        <Button
+          borderRadius={20}
+          width="full"
+          color="foodiez.orange"
+          fontSize="sm"
+        >
+          Login to my account
+        </Button>
+      </Link>
     </Box>
   );
 
@@ -125,7 +128,6 @@ const login = () => {
               paddingLeft={7}
               textAlign="center"
               color={"orange"}
-              
             >
               Forgot your password?
             </Text>

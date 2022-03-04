@@ -6,7 +6,7 @@ import {
   Input,
   Button,
   Link,
-
+  Center,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -28,25 +28,22 @@ const create = () => {
     </Box>
   );
 
-
   const button = () => (
     <Box padding={5}>
-      <Button
-        borderRadius={20}
-        width="70%"
-        marginBottom={5}
-        color="black"
-        backgroundColor="white"
-        boxShadow="base"
-        p="6"
-        fontSize="sm"
-        marginLeft={14}
-
-        
-      >
-        <Image src="/images/google.png" width={30} height={30} />
-        Sign-in with Google
-      </Button>{" "}
+      <Center width={"full"} marginBottom={5}>
+        <Button
+          borderRadius={20}
+          width="60%"
+          color="black"
+          backgroundColor="white"
+          boxShadow="base"
+          p="6"
+          fontSize="sm"
+        >
+          <Image src="/images/google.png" width={30} height={30} />
+          Sign-in with Google
+        </Button>{" "}
+      </Center>
       <Button
         borderRadius={20}
         width="full"
@@ -67,7 +64,7 @@ const create = () => {
         >
           Login to my account
         </Button>
-        </Link>
+      </Link>
     </Box>
   );
 

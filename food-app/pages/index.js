@@ -61,9 +61,11 @@ const Home = () => {
           <Image src="/images/icon.png" width={35} height={24} />
         </Box>
         <Spacer />
+        <Link href={"/order/delivery"}>
         <Box w="70px" h="10" fontWeight={700} color="foodiez.orange">
           Skip
         </Box>
+        </Link>
       </Flex>
       {renderCarousel()}
       {button()}

@@ -154,7 +154,7 @@ const Delivery = () => {
     </Box>,
     <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
-        <img src="/images/burger-menu.png" width={200} />
+        <img src="/images/burger-2.png" width={190} />
       </Center>
       <Box padding={3}>
         <Text fontSize="lg" marginBottom={2} fontWeight={500}>
@@ -167,7 +167,7 @@ const Delivery = () => {
     </Box>,
     <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
-        <img src="/images/burger-menu.png" width={200} />
+        <img src="/images/burger-3.png" width={115} />
       </Center>
       <Box padding={3}>
         <Text fontSize="lg" marginBottom={2} fontWeight={500}>

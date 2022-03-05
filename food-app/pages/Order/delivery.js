@@ -14,10 +14,15 @@ import {
   border,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import {BiHomeAlt, BiLike } from "react-icons/bi";
-import { HiSearch} from "react-icons/hi";
-import {FaRegBell} from "react-icons/fa";
-import { AiOutlineDown,  AiOutlineShoppingCart } from "react-icons/ai";
+import { BiHomeAlt, BiLike } from "react-icons/bi";
+import { HiSearch } from "react-icons/hi";
+import { FaRegBell } from "react-icons/fa";
+import { FcLike } from "react-icons/fc";
+import {
+  AiFillStar,
+  AiOutlineDown,
+  AiOutlineShoppingCart,
+} from "react-icons/ai";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -141,7 +146,7 @@ const Delivery = () => {
   );
 
   const menu = [
-    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+    <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-menu.png" width={200} />
       </Center>
@@ -152,9 +157,18 @@ const Delivery = () => {
         <Text fontSize="sm">
           No 10 opp lekki phase 1 bridge in sangotedo estate
         </Text>
+        <Flex paddingTop={3}>
+          <Center display={"flex"}>
+            <AiFillStar /> <Text marginLeft={2}> 4+ </Text>
+          </Center>
+          <Spacer />
+          <Box>
+            <FcLike />
+          </Box>
+        </Flex>
       </Box>
     </Box>,
-    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+    <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-2.png" width={190} />
       </Center>
@@ -165,9 +179,18 @@ const Delivery = () => {
         <Text fontSize="sm">
           No 10 opp lekki phase 1 bridge in sangotedo estate
         </Text>
+        <Flex paddingTop={3}>
+          <Center display={"flex"}>
+            <AiFillStar /> <Text marginLeft={2}> 4+ </Text>
+          </Center>
+          <Spacer />
+          <Box>
+            <FcLike />
+          </Box>
+        </Flex>
       </Box>
     </Box>,
-    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+    <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-3.png" width={115} />
       </Center>
@@ -178,9 +201,18 @@ const Delivery = () => {
         <Text fontSize="sm">
           No 10 opp lekki phase 1 bridge in sangotedo estate
         </Text>
+        <Flex paddingTop={3}>
+          <Center display={"flex"}>
+            <AiFillStar /> <Text marginLeft={2}> 4+ </Text>
+          </Center>
+          <Spacer />
+          <Box>
+            <FcLike />
+          </Box>
+        </Flex>
       </Box>
     </Box>,
-    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+    <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-menu.png" width={200} />
       </Center>
@@ -191,9 +223,18 @@ const Delivery = () => {
         <Text fontSize="sm">
           No 10 opp lekki phase 1 bridge in sangotedo estate
         </Text>
+        <Flex paddingTop={3}>
+          <Center display={"flex"}>
+            <AiFillStar /> <Text marginLeft={2}> 4+ </Text>
+          </Center>
+          <Spacer />
+          <Box>
+            <FcLike />
+          </Box>
+        </Flex>
       </Box>
     </Box>,
-    <Box width={225} height={270} boxShadow="sm" rounded="md" bg="white">
+    <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-menu.png" width={200} />
       </Center>
@@ -204,6 +245,15 @@ const Delivery = () => {
         <Text fontSize="sm">
           No 10 opp lekki phase 1 bridge in sangotedo estate
         </Text>
+        <Flex paddingTop={3}>
+          <Center display={"flex"}>
+            <AiFillStar /> <Text marginLeft={2}> 4+ </Text>
+          </Center>
+          <Spacer />
+          <Box>
+            <FcLike />
+          </Box>
+        </Flex>
       </Box>
     </Box>,
   ];
@@ -220,25 +270,41 @@ const Delivery = () => {
   );
 
   const Footer = () => (
-    <Box   boxShadow='xs' rounded='md' bg='white' borderRadius={"20px 20px 0 0"}>
-      <Flex >
-        <Center w="60px" height={16}  fontSize={22}  > <BiHomeAlt/> </Center>
+    <Box boxShadow="xs" rounded="md" bg="white" borderRadius={"20px 20px 0 0"} marginTop={30}>
+      
+      <Flex>
+        <Center w="60px" height={16} fontSize={22}>
+          {" "}
+          <BiHomeAlt />{" "}
+        </Center>
         <Spacer />
-        <Center w="60px" height={16} fontSize={22} > <BiLike/> </Center>
+        <Center w="60px" height={16} fontSize={22}>
+          {" "}
+          <BiLike />{" "}
+        </Center>
 
         <Spacer />
-        <Center w="60px" height={16} fontSize={22} > <HiSearch/> </Center>
+        <Center w="60px" height={16} fontSize={22}>
+          {" "}
+          <HiSearch />{" "}
+        </Center>
         <Spacer />
-        <Center w="60px" height={16} fontSize={22} > <FaRegBell/> </Center>
+        <Center w="60px" height={16} fontSize={22}>
+          {" "}
+          <FaRegBell />{" "}
+        </Center>
         <Spacer />
-        <Center w="60px" height={16} fontSize={22} > <AiOutlineShoppingCart/> </Center>
+        <Center w="60px" height={16} fontSize={22}>
+          {" "}
+          <AiOutlineShoppingCart />{" "}
+        </Center>
       </Flex>
     </Box>
   );
 
   return (
-    <Box>
-      <Box backgroundColor={"#F7F7FB"} height="100vh" padding={10}>
+    <Box backgroundColor={"#F7F7FB"}>
+      <Box height="100vh" padding={10}>
         {Header()}
         {foodList()}
         {listCarousel()}
@@ -250,6 +316,7 @@ const Delivery = () => {
           <Box color={"#FE554A"}>View all(29)</Box>
         </Flex>
         {menuCarousel()}
+       
       </Box>
       <Box width={"full"}>{Footer()}</Box>
     </Box>

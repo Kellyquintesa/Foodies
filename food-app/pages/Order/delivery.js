@@ -217,12 +217,28 @@ const Delivery = () => {
     />
   );
 
+  const Footer = () => (
+    <Box border={"1px solid black"} bottom={0} >
+        <Flex backgroundColor={"lightblue"} >
+    <Box w='50px' h='10'/>
+    <Spacer />
+    <Box w='50px' h='10'  />
+    <Spacer />
+    <Box w='50px' h='10' />
+    <Spacer />
+    <Box w='50px' h='10' />
+    <Spacer />
+    <Box w='50px' h='10'  />
+  </Flex>
+    </Box>
+  )
+
   return (
+    <Box>
     <Box backgroundColor={"#F7F7FB"} height="100vh" padding={10}>
       {Header()}
       {foodList()}
       {listCarousel()}
-
       <Flex marginTop={5} marginBottom={5} alignItems={"center"}>
         <Box fontWeight={700} fontSize="xl">
           Popular restaurants
@@ -230,8 +246,13 @@ const Delivery = () => {
         <Spacer />
         <Box color={"#FE554A"}>View all(29)</Box>
       </Flex>
-
       {menuCarousel()}
+     
+    
+    </Box>
+    <Box width={"full"}>
+      {Footer()}
+    </Box>
     </Box>
   );
 };

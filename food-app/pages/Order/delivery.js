@@ -14,8 +14,10 @@ import {
   border,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaPizzaSlice } from "react-icons/fa";
-import { AiOutlineDown } from "react-icons/ai";
+import {BiHomeAlt, BiLike } from "react-icons/bi";
+import { HiSearch} from "react-icons/hi";
+import {FaRegBell} from "react-icons/fa";
+import { AiOutlineDown,  AiOutlineShoppingCart } from "react-icons/ai";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -218,41 +220,38 @@ const Delivery = () => {
   );
 
   const Footer = () => (
-    <Box border={"1px solid black"} bottom={0} >
-        <Flex backgroundColor={"lightblue"} >
-    <Box w='50px' h='10'/>
-    <Spacer />
-    <Box w='50px' h='10'  />
-    <Spacer />
-    <Box w='50px' h='10' />
-    <Spacer />
-    <Box w='50px' h='10' />
-    <Spacer />
-    <Box w='50px' h='10'  />
-  </Flex>
+    <Box   boxShadow='xs' rounded='md' bg='white' borderRadius={"20px 20px 0 0"}>
+      <Flex >
+        <Center w="60px" height={16}  fontSize={22}  > <BiHomeAlt/> </Center>
+        <Spacer />
+        <Center w="60px" height={16} fontSize={22} > <BiLike/> </Center>
+
+        <Spacer />
+        <Center w="60px" height={16} fontSize={22} > <HiSearch/> </Center>
+        <Spacer />
+        <Center w="60px" height={16} fontSize={22} > <FaRegBell/> </Center>
+        <Spacer />
+        <Center w="60px" height={16} fontSize={22} > <AiOutlineShoppingCart/> </Center>
+      </Flex>
     </Box>
-  )
+  );
 
   return (
     <Box>
-    <Box backgroundColor={"#F7F7FB"} height="100vh" padding={10}>
-      {Header()}
-      {foodList()}
-      {listCarousel()}
-      <Flex marginTop={5} marginBottom={5} alignItems={"center"}>
-        <Box fontWeight={700} fontSize="xl">
-          Popular restaurants
-        </Box>
-        <Spacer />
-        <Box color={"#FE554A"}>View all(29)</Box>
-      </Flex>
-      {menuCarousel()}
-     
-    
-    </Box>
-    <Box width={"full"}>
-      {Footer()}
-    </Box>
+      <Box backgroundColor={"#F7F7FB"} height="100vh" padding={10}>
+        {Header()}
+        {foodList()}
+        {listCarousel()}
+        <Flex marginTop={5} marginBottom={5} alignItems={"center"}>
+          <Box fontWeight={700} fontSize="xl">
+            Popular restaurants
+          </Box>
+          <Spacer />
+          <Box color={"#FE554A"}>View all(29)</Box>
+        </Flex>
+        {menuCarousel()}
+      </Box>
+      <Box width={"full"}>{Footer()}</Box>
     </Box>
   );
 };

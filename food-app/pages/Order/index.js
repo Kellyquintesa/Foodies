@@ -15,10 +15,10 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { HiSearch } from "react-icons/hi";
-import { ChevronLeftIcon } from "@chakra-ui/react";
+
 import { FaRegBell } from "react-icons/fa";
 import { BiHomeAlt, BiLike } from "react-icons/bi";
-import { BsFillClockFill } from "react-icons/bs";
+import { BsFillClockFill, BsChevronLeft} from "react-icons/bs";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
 import {
   AiFillStar,
@@ -34,10 +34,13 @@ const index = () => {
     1024: { items: 3 },
   };
 
-  const Header = () => (
+  const orderHeader = () => (
     <Box padding={10}>
       <Flex>
-        <Box w="70px" h="50" > <ChevronLeftIcon/> </Box>
+        <Box w="70px" h="50">
+          {" "}
+          <BsChevronLeft/>{" "}
+        </Box>
         <Spacer />
         <Box w="200px" h="50">
           {" "}
@@ -151,7 +154,7 @@ const index = () => {
   return (
     <Box>
       <Box height="100vh">
-        {Header()}
+        {orderHeader()}
         {menuPhoto()}
       </Box>
       <Box>{cartButton()}</Box>

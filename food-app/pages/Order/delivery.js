@@ -29,9 +29,15 @@ import "react-alice-carousel/lib/alice-carousel.css";
 const Delivery = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const responsive = {
+  const listResponsive = {
     0: { items: 1 },
-    420: { items: 2 },
+    300: { items: 2 },
+    1024: { items: 3 },
+  };
+
+  const i = {
+    0: { items: 1 },
+    450: { items: 2 },
     1024: { items: 3 },
   };
 
@@ -123,7 +129,7 @@ const Delivery = () => {
     </Box>
   );
 
-  const foodList = () => (
+  const headerText = () => (
     <Box>
       <Box marginTop={10}>
         <Text fontSize="2xl" fontWeight={600}>
@@ -138,7 +144,7 @@ const Delivery = () => {
       <AliceCarousel
         mouseTracking
         items={items}
-        responsive={responsive}
+        responsive={listResponsive}
         controlsStrategy="alternate"
         disableButtonsControls
       />
@@ -265,7 +271,7 @@ const Delivery = () => {
       mouseTracking
       keyboardNavigation
       items={menu}
-      responsive={responsive}
+      responsive={i}
       disableDotsControls
       disableButtonsControls
     />
@@ -308,7 +314,7 @@ const Delivery = () => {
     <Box backgroundColor={"#F7F7FB"}>
       <Box height="100vh" padding={10}>
         {Header()}
-        {foodList()}
+        {headerText()}
         {listCarousel()}
         <Flex marginTop={5} marginBottom={5} alignItems={"center"}>
           <Box fontWeight={700} fontSize="xl">

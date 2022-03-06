@@ -144,20 +144,7 @@ const index = () => {
     </Box>
   );
 
-  const Button = () => (
-    <Box>
-      <Button
-        borderRadius={20}
-        width="full"
-        marginBottom={5}
-        color="white"
-        backgroundColor="foodiez.orange"
-        fontSize="sm"
-      >
-        Create an account
-      </Button>
-    </Box>
-  );
+ 
   
   return (
     <Box>
@@ -165,7 +152,7 @@ const index = () => {
         {Header()}
         {menuPhoto()}
       </Box>
-      <Box> {Button()}</Box>
+   
     </Box>
   );
 };

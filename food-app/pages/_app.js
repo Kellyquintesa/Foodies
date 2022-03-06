@@ -10,6 +10,7 @@ const colors = {
   },
 }
 
+
 const theme = extendTheme({ colors })
 
 function MyApp({ Component, pageProps }) {

@@ -1,51 +1,26 @@
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Box,
-  Flex,
-  Spacer,
-  useDisclosure,
-  Image,
-  Button,
-  Text,
-  Center,
-  border,
-} from "@chakra-ui/react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { HiSearch } from "react-icons/hi";
-
-import { FaRegBell } from "react-icons/fa";
-import { BiHomeAlt, BiLike } from "react-icons/bi";
-import { BsFillClockFill, BsChevronLeft} from "react-icons/bs";
+import { Box, Flex, Spacer, Button, Link, Text, Center } from "@chakra-ui/react";
+import { BsFillClockFill, BsChevronLeft } from "react-icons/bs";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
-import {
-  AiFillStar,
-  AiOutlineDown,
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
+import { AiFillStar, AiOutlineDown } from "react-icons/ai";
 import NumericInput from "react-numeric-input";
 
 const index = () => {
-  const responsive = {
-    0: { items: 1 },
-    420: { items: 2 },
-    1024: { items: 3 },
-  };
-
+  
   const orderHeader = () => (
     <Box padding={10}>
       <Flex>
-        <Box w="70px" h="50">
-          {" "}
-          <BsChevronLeft/>{" "}
-        </Box>
+        <Center w="70px" h="50" >
+          <Link href="/order/delivery">
+          <Box fontSize={25} >
+          <BsChevronLeft />{" "}
+          </Box>
+          </Link>
+        </Center>
         <Spacer />
         <Box w="200px" h="50">
           {" "}
           <Center>
-            <Box width="fit-content">
+            <Box width="fit-content" >
               <Text
                 fontSize="xs"
                 alignItems={"center"}
@@ -139,6 +114,7 @@ const index = () => {
 
   const cartButton = () => (
     <Box margin={5}>
+      <Link href="/order/cart">
       <Button
         borderRadius={20}
         width="full"
@@ -146,13 +122,14 @@ const index = () => {
         color="white"
         backgroundColor="foodiez.orange"
       >
-        Button
+        Add to cart
       </Button>
+      </Link>
     </Box>
   );
 
   return (
-    <Box>
+    <Box backgroundColor={"#F7F7FB"}>
       <Box height="100vh">
         {orderHeader()}
         {menuPhoto()}

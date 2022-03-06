@@ -14,6 +14,10 @@ import {
   border,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { HiSearch } from "react-icons/hi";
+import { ChevronLeftIcon } from "@chakra-ui/react";
+import { FaRegBell } from "react-icons/fa";
+import { BiHomeAlt, BiLike } from "react-icons/bi";
 import { BsFillClockFill } from "react-icons/bs";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
 import {
@@ -24,8 +28,6 @@ import {
 import NumericInput from "react-numeric-input";
 
 const index = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   const responsive = {
     0: { items: 1 },
     420: { items: 2 },
@@ -33,25 +35,12 @@ const index = () => {
   };
 
   const Header = () => (
-    <Box>
-      <Flex padding={10}>
-        <Box w="70px" h="50">
-          <Menu isOpen={isOpen} onClose={onClose}>
-            <MenuButton as={Button} variant="solid" onClick={onOpen}>
-              <GiHamburgerMenu />
-            </MenuButton>
-            <MenuList>
-              <MenuItem>Download</MenuItem>
-              <MenuItem>Create a Copy</MenuItem>
-              <MenuItem>Mark as Draft</MenuItem>
-              <MenuItem>Delete</MenuItem>
-              <MenuItem>Attend a Workshop</MenuItem>
-            </MenuList>
-          </Menu>
-        </Box>
-
+    <Box padding={10}>
+      <Flex>
+        <Box w="70px" h="50" > <ChevronLeftIcon/> </Box>
         <Spacer />
         <Box w="200px" h="50">
+          {" "}
           <Center>
             <Box width="fit-content">
               <Text
@@ -71,6 +60,7 @@ const index = () => {
         </Box>
         <Spacer />
         <Box w="50px" h="50">
+          {" "}
           <img src="/images/person.jpg" />
         </Box>
       </Flex>
@@ -138,21 +128,33 @@ const index = () => {
         <Text fontSize="lg" textAlign="justify">
           Our simple, classic cheeseburger begins with a 100% pure beef burger
           seasoned with just a pinch of salt and pepper. The McDonald’s
-          Cheeseburger is topped
+          Cheeseburger is topped more
         </Text>
       </Box>
     </Box>
   );
 
- 
-  
+  const cartButton = () => (
+    <Box margin={5}>
+      <Button
+        borderRadius={20}
+        width="full"
+        marginBottom={5}
+        color="white"
+        backgroundColor="foodiez.orange"
+      >
+        Button
+      </Button>
+    </Box>
+  );
+
   return (
     <Box>
-      <Box>
+      <Box height="100vh">
         {Header()}
         {menuPhoto()}
       </Box>
-   
+      <Box>{cartButton()}</Box>
     </Box>
   );
 };

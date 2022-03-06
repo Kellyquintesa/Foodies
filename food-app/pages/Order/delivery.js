@@ -7,11 +7,11 @@ import {
   Flex,
   Spacer,
   useDisclosure,
-  Image,
+  Link,
   Button,
   Text,
   Center,
-  border,
+  
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiHomeAlt, BiLike } from "react-icons/bi";
@@ -146,6 +146,7 @@ const Delivery = () => {
   );
 
   const menu = [
+    <Link href="/order" >
     <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-menu.png" width={200} />
@@ -167,7 +168,8 @@ const Delivery = () => {
           </Box>
         </Flex>
       </Box>
-    </Box>,
+    </Box>
+    </Link>,
     <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-2.png" width={190} />

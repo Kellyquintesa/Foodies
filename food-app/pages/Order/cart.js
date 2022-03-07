@@ -77,8 +77,8 @@ const cart = () => {
         <Spacer />
         <Center w="160px" h="90" display={"flex"} flexDirection="column">
           <Box>
-            <Text fontSize="lg" fontWeight={500}>The Macdonalds </Text>
-            <Text fontSize="sm">Classic cheesburger</Text>
+            <Text fontSize="md" fontWeight={500}>The Macdonalds </Text>
+            <Text fontSize="xs">Classic cheesburger</Text>
             <Text fontSize="lg" color={"#FE554A"} fontWeight={500}>
               $23.99
             </Text>
@@ -87,16 +87,15 @@ const cart = () => {
 
         <Spacer />
         <Box w="140px" h="90">
-          <Center marginTop={8}>
+          <Center marginTop={8}  >
             <NumericInput
-         
               className="form-control"
               value={1}
               min={0}
               max={100}
               step={1}
               precision={0}
-              size={5}
+              size={1}
               mobile
             />
           </Center>
@@ -117,7 +116,7 @@ const cart = () => {
 
   const paymentButton = () => (
     <Box margin={5}>
-      <Link href="/order/cart">
+      <Link href="/order/payment">
         <Button
           borderRadius={20}
           width="full"

@@ -113,12 +113,12 @@ const index = () => {
   );
 
   const cartButton = () => (
-    <Box margin={5}>
+    <Box marginTop={15} padding={10}>
       <Link href="/order/cart">
       <Button
         borderRadius={20}
         width="full"
-        marginBottom={5}
+       
         color="white"
         backgroundColor="foodiez.orange"
       >
@@ -134,7 +134,7 @@ const index = () => {
         {orderHeader()}
         {menuPhoto()}
       </Box>
-      <Box>{cartButton()}</Box>
+      {cartButton()}
     </Box>
   );
 };

@@ -116,7 +116,7 @@ const payment = () => {
 
   const paymentButton = () => (
     <Box margin={5}>
-      <Link href="/order">
+      <Link href="/order/card">
         <Button
           borderRadius={20}
           width="full"

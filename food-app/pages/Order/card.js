@@ -24,7 +24,7 @@ const card = () => {
 
   const paymentButton = () => (
     <Box margin={5} >
-      <Link href="/order/payment">
+      <Link href="/order/success">
         <Button
           borderRadius={20}
           width="full"

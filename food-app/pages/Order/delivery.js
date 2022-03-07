@@ -93,11 +93,11 @@ const Delivery = () => {
               <GiHamburgerMenu />
             </MenuButton>
             <MenuList>
-              <MenuItem>Download</MenuItem>
-              <MenuItem>Create a Copy</MenuItem>
-              <MenuItem>Mark as Draft</MenuItem>
-              <MenuItem>Delete</MenuItem>
-              <MenuItem>Attend a Workshop</MenuItem>
+              <MenuItem>My profile</MenuItem>
+              <MenuItem>Payment method</MenuItem>
+              <MenuItem>Settings</MenuItem>
+              <MenuItem>Help</MenuItem>
+              <MenuItem>Privacy policy</MenuItem>
             </MenuList>
           </Menu>
         </Box>
@@ -176,6 +176,7 @@ const Delivery = () => {
       </Box>
     </Box>
     </Link>,
+    <Link href="/order" >
     <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-2.png" width={190} />
@@ -197,7 +198,9 @@ const Delivery = () => {
           </Box>
         </Flex>
       </Box>
-    </Box>,
+    </Box>
+    </Link>,
+    <Link href="/order" >
     <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-3.png" width={115} />
@@ -219,7 +222,9 @@ const Delivery = () => {
           </Box>
         </Flex>
       </Box>
-    </Box>,
+    </Box>
+    </Link>,
+    <Link href="/order" >
     <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-menu.png" width={200} />
@@ -241,7 +246,9 @@ const Delivery = () => {
           </Box>
         </Flex>
       </Box>
-    </Box>,
+    </Box>
+    </Link>,
+    <Link href="/order" >
     <Box width={225} height={280} boxShadow="sm" rounded="md" bg="white">
       <Center paddingTop={30}>
         <img src="/images/burger-menu.png" width={200} />
@@ -263,7 +270,8 @@ const Delivery = () => {
           </Box>
         </Flex>
       </Box>
-    </Box>,
+    </Box>
+    </Link>,
   ];
 
   const menuCarousel = () => (

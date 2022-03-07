@@ -2,7 +2,6 @@ import {
   Box,
   Flex,
   Spacer,
-  useDisclosure,
   Link,
   Button,
   Text,
@@ -71,14 +70,14 @@ const cart = () => {
       bg="white"
       margin={5}
     >
-      <Flex >
+      <Flex>
         <Center w="70px" h="90">
           <img src="/images/burger-menu.png" />
         </Center>
         <Spacer />
         <Center w="160px" h="90" display={"flex"} flexDirection="column">
           <Box>
-            <Text fontSize="lg">The Macdonalds </Text>
+            <Text fontSize="lg" fontWeight={500}>The Macdonalds </Text>
             <Text fontSize="sm">Classic cheesburger</Text>
             <Text fontSize="lg" color={"#FE554A"} fontWeight={500}>
               $23.99
@@ -90,6 +89,7 @@ const cart = () => {
         <Box w="140px" h="90">
           <Center marginTop={8}>
             <NumericInput
+         
               className="form-control"
               value={1}
               min={0}
@@ -105,30 +105,28 @@ const cart = () => {
     </Box>
   );
 
-const total = () => (
+  const total = () => (
     <Flex padding={10}>
-    <Box p='4' >
-     Total
-    </Box>
-    <Spacer />
-    <Box p='4' fontSize='xl' fontWeight={700}>
-    $345
-    </Box>
-  </Flex>
-)
+      <Box p="4">Total</Box>
+      <Spacer />
+      <Box p="4" fontSize="xl" fontWeight={700}>
+        $345
+      </Box>
+    </Flex>
+  );
 
-const paymentButton = () => (
+  const paymentButton = () => (
     <Box margin={5}>
       <Link href="/order/cart">
-      <Button
-        borderRadius={20}
-        width="full"
-        marginBottom={5}
-        color="white"
-        backgroundColor="foodiez.orange"
-      >
-      Process to payment
-      </Button>
+        <Button
+          borderRadius={20}
+          width="full"
+          marginBottom={5}
+          color="white"
+          backgroundColor="foodiez.orange"
+        >
+          Process to payment
+        </Button>
       </Link>
     </Box>
   );
@@ -143,9 +141,7 @@ const paymentButton = () => (
         {item()}
         {total()}
       </Box>
-      <Box>
-          {paymentButton()}
-      </Box>
+      <Box>{paymentButton()}</Box>
     </Box>
   );
 };
